@@ -7,14 +7,15 @@ def output_text_to_console(text):
     Args:
         text (str): The text to output to the console.
     """
-    pass
+    print(text)
 
 def write_text_to_file(text, filename):
     """
-    Function to write text to a file
+    Function to write text to a file.
 
     Args:
         text (str): The text to write to the file.
         filename (str): The name of the file to write to.
     """
-    pass
+    with open(filename, 'w') as file:
+        file.write(text)
