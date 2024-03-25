@@ -37,7 +37,7 @@ def read_text_from_file_pandas(filename):
         str: text from the file.
     """
     if os.path.exists(filename):
-        data = pd.read_csv(filename)
+        data = pd.read_csv(filename, escapechar='\\')
         return data.to_string(index=False, header=False)
     else:
         print(f"File '{filename}' does not exist.")
